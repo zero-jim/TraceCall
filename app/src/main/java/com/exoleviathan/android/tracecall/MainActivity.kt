@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.exoleviathan.android.tracecall.ui.theme.TraceCallTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
