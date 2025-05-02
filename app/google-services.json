@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "273826538008",
+    "project_id": "tracecall",
+    "storage_bucket": "tracecall.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273826538008:android:75add3648d8547f942596d",
+        "android_client_info": {
+          "package_name": "com.exoleviathan.android.tracecall"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA778VJxQH8GXk3-4loeYaYmC6V1ivuT1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
