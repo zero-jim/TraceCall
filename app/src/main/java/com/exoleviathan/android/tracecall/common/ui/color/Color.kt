@@ -1,4 +1,4 @@
-package com.exoleviathan.android.tracecall.ui.theme
+package com.exoleviathan.android.tracecall.common.ui.color
 
 import androidx.compose.ui.graphics.Color
 

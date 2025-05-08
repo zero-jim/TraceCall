@@ -1,4 +1,4 @@
-package com.exoleviathan.android.tracecall.ui.theme
+package com.exoleviathan.android.tracecall.common.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,6 +9,17 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import com.exoleviathan.android.tracecall.common.ui.color.AppBackgroundDark
+import com.exoleviathan.android.tracecall.common.ui.color.AppBackgroundLight
+import com.exoleviathan.android.tracecall.common.ui.color.OnPrimaryDark
+import com.exoleviathan.android.tracecall.common.ui.color.OnPrimaryLight
+import com.exoleviathan.android.tracecall.common.ui.color.PrimaryDark
+import com.exoleviathan.android.tracecall.common.ui.color.PrimaryLight
+import com.exoleviathan.android.tracecall.common.ui.color.SecondaryDark
+import com.exoleviathan.android.tracecall.common.ui.color.SecondaryLight
+import com.exoleviathan.android.tracecall.common.ui.color.TertiaryDark
+import com.exoleviathan.android.tracecall.common.ui.color.TertiaryLight
+import com.exoleviathan.android.tracecall.common.ui.type.Typography
 
 private val LightColorScheme = lightColorScheme(
     background = AppBackgroundLight,

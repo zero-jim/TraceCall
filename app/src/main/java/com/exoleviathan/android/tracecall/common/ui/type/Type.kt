@@ -1,4 +1,4 @@
-package com.exoleviathan.android.tracecall.ui.theme
+package com.exoleviathan.android.tracecall.common.ui.type
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
