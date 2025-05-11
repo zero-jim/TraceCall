@@ -30,7 +30,7 @@
         <activity
             android:name=".home.ui.HomeActivity"
             android:exported="false"
-            android:theme="@style/Theme.TraceCall" />
+            android:theme="@style/Theme.TraceCall.NoActionBar" />
 
     </application>
 
