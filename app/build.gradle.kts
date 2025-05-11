@@ -55,12 +55,13 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.google.accompanist.permissions)
-    implementation(libs.coil.compose)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    implementation(libs.google.accompanist.permissions)
+    implementation(libs.coil.compose)
 
     // firebase dependencies
     implementation(platform(libs.firebase.bom))

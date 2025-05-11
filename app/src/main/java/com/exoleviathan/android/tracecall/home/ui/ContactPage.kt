@@ -51,6 +51,7 @@ import com.exoleviathan.android.tracecall.home.model.ContactIntents
 import com.exoleviathan.android.tracecall.home.model.ContactStates
 import com.exoleviathan.android.tracecall.home.viewmodel.ContactViewModel
 import kotlinx.coroutines.launch
+import androidx.core.net.toUri
 
 @Composable
 fun ContactPage(contactViewModel: ContactViewModel, modifier: Modifier) {
@@ -93,7 +94,7 @@ fun ContactItemsCard(
     uriData: (Uri?) -> Unit
 ) {
     Card(
-        modifier = modifier.padding(horizontal = 10.dp, vertical = 10.dp).fillMaxWidth(),
+        modifier = modifier.padding(horizontal = 10.dp).fillMaxWidth(),
         shape = RoundedCornerShape(26.dp),
         elevation = CardDefaults.cardElevation(0.dp)
     ) {
@@ -143,7 +144,7 @@ fun ContactItem(
         ) {
             val context = LocalContext.current
             contactInfo.contactPhotoUri?.let {
-                val data = Uri.parse(it)
+                val data = it.toUri()
                 AsyncImage(
                     model = ImageRequest.Builder(context).data(data).crossfade(true).build(),
                     modifier = Modifier.size(36.dp).clip(RoundedCornerShape(18.dp)).clickable { onShowImagePopup.invoke(data) },
