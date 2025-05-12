@@ -102,7 +102,7 @@ fun ContactItemsCard(
         LazyColumn {
             itemsIndexed(contactList) { index, contactInfo ->
                 if (index != 0) {
-                    HorizontalDivider(modifier = Modifier.padding(horizontal = 10.dp))
+                    HorizontalDivider(modifier = Modifier.padding(horizontal = 14.dp))
                 }
 
                 ContactItem(

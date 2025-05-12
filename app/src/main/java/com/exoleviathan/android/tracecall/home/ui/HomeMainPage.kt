@@ -28,6 +28,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.createGraph
 import com.exoleviathan.android.tracecall.common.ui.navigation.NavigationItems
+import com.exoleviathan.android.tracecall.home.model.CallLogStates
+import com.exoleviathan.android.tracecall.home.model.ContactStates
 import com.exoleviathan.android.tracecall.home.model.HomeNavigationItems
 import com.exoleviathan.android.tracecall.home.viewmodel.CallLogViewModel
 import com.exoleviathan.android.tracecall.home.viewmodel.ContactViewModel
@@ -59,10 +61,16 @@ fun HomeMainPage(callLogViewModel: CallLogViewModel, contactViewModel: ContactVi
                 val navGraph = remember(navController) {
                     navController.createGraph(startDestination = HomeNavigationItems.CallLog.route) {
                         composable(route = HomeNavigationItems.CallLog.route) {
+                            LaunchedEffect(Unit) {
+                                callLogViewModel.callLogStates.emit(CallLogStates.InitialState)
+                            }
                             CallLogPage(callLogViewModel, Modifier)
                         }
 
                         composable(route = HomeNavigationItems.Contact.route) {
+                            LaunchedEffect(Unit) {
+                                contactViewModel.contactListState.emit(ContactStates.InitialState)
+                            }
                             ContactPage(contactViewModel, Modifier)
                         }
 

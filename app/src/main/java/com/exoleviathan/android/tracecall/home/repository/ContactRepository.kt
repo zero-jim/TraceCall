@@ -2,8 +2,8 @@ package com.exoleviathan.android.tracecall.home.repository
 
 import android.content.Context
 import android.database.Cursor
-import android.net.Uri
 import android.provider.ContactsContract
+import androidx.core.net.toUri
 import com.exoleviathan.android.tracecall.common.utils.Logger
 import com.exoleviathan.android.tracecall.home.model.ContactInfo
 
@@ -20,7 +20,7 @@ object ContactRepository {
         val contactItems = arrayListOf<ContactInfo>()
         var cursor: Cursor? = null
         try {
-            cursor = context.contentResolver.query(Uri.parse("content://$SIM_CONTENT_AUTHORITY"), null, null, null)
+            cursor = context.contentResolver.query("content://$SIM_CONTENT_AUTHORITY".toUri(), null, null, null)
 
             cursor?.use {
                 val nameIndex = it.getColumnIndex(SIM_COLUMN_NAME)
